@@ -155,11 +155,27 @@ public class Executor extends Usr {
     public void display() {
         double x = 0.0;
 
-        while (x <= 3.0){
-            System.out.printf("%-22.3f %-22.3f %-22.3f %-22.3f %-22.3f %-22.3f %-22.3f",
-                    f1(x), f2(x), f3(x), f4(x),f5(x),f6(x),f7(x));
-            System.out.println();
+        while (x < 3.1){
+
+            if (f1(x) == Double.POSITIVE_INFINITY || f1(x) == Double.NEGATIVE_INFINITY){
+                System.out.printf("%-22.1f %-22s %-22.3f %-22s %-22.3f",
+                        x, "Разрыв", f2(x), "Разрыв",f6(x));
+            } else {
+
+                System.out.printf("%-22.1f %-22.3f %-22.3f %-22.3f %-22.3f",
+                        x, f1(x), f2(x), f4(x), f6(x));
+            }
+            println("");
             x += 0.1;
+        }
+
+        println("----------------------------------------------------------------------------");
+
+        double[] r  = {PI/3, PI/4, 2*PI/3, PI};
+        for (double aR : r) {
+            System.out.printf("%-22.3f %-22.3f %-22.3f %-22.3f %-22.3f",
+                    aR, f1(aR), f2(aR), f4(aR), f6(aR));
+            println("");
         }
     }
 }
