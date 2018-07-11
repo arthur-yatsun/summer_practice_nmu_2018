@@ -1,6 +1,6 @@
 package controller;
 
-import usage.Executor;
+import usage.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,25 +10,34 @@ import java.io.IOException;
  */
 public class Controller {
 
-    private Executor ex = new Executor();
+    private Lab1 lab1 = new Lab1();
+    private Lab2 lab2 = new Lab2();
+    private Lab3 lab3 = new Lab3();
+    private Lab4 lab4 = new Lab4();
+    private Lab5 lab5 = new Lab5();
 
     private double[] a = new double[15];
     private int[] b = new int[10];
 
+    public void count(){
+        lab1.count();
+    }
+
     public void getArray1(){
-        ex.fill(a);     //заполнение массива
-        ex.sum(a);      //подсчет
+//        lab2.fill(a);
+//        lab2.sum(a);
     }
 
     public void getArray2(){
-        ex.solve(b);
+//        lab3.solve(b);
     }
 
     public void files() throws IOException {
-        ex.readFromFile();
-        ex.writeInFile();
+//        lab4.readFromFile();
+//        lab4.writeInFile();
     }
+
     public void grafics(){
-        ex.display();
+//        lab5.display();
     }
 }

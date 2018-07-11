@@ -6,15 +6,17 @@ public class Main {
     private static Controller controller = new Controller();
     public static void main(String[] args) {
 
-        //controller.getArray1();
+        controller.count();
 
-        //controller.getArray2();
+        controller.getArray1();
 
-        /*try {
+        controller.getArray2();
+
+        try {
             controller.files();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
 
         controller.grafics();
     }
