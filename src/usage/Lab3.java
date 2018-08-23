@@ -7,9 +7,6 @@ import java.util.Scanner;
 import static util.Print.print;
 import static util.Print.println;
 
-/**
- * Created by arthur on 10.07.18.
- */
 public class Lab3 {
 
     private Scanner scanner = new Scanner(System.in);

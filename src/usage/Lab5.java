@@ -5,9 +5,6 @@ import static java.lang.Math.PI;
 import static java.lang.Math.sin;
 import static util.Print.println;
 
-/**
- * Created by arthur on 10.07.18.
- */
 public class Lab5 {
 
     public double f1(double x){

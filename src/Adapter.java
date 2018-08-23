@@ -1,14 +1,9 @@
-package controller;
-
 import usage.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Created by arthur on 18.06.18.
- */
-public class Controller {
+public class Adapter {
 
     private Lab1 lab1 = new Lab1();
     private Lab2 lab2 = new Lab2();
@@ -24,20 +19,20 @@ public class Controller {
     }
 
     public void getArray1(){
-//        lab2.fill(a);
-//        lab2.sum(a);
+        lab2.fill(a);
+        lab2.sum(a);
     }
 
     public void getArray2(){
-//        lab3.solve(b);
+        lab3.solve(b);
     }
 
     public void files() throws IOException {
-//        lab4.readFromFile();
-//        lab4.writeInFile();
+        lab4.readFromFile();
+        lab4.writeInFile();
     }
 
     public void grafics(){
-//        lab5.display();
+        lab5.display();
     }
 }

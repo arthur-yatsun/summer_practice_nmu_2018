@@ -2,9 +2,6 @@ package usage;
 
 import static util.Print.println;
 
-/**
- * Created by arthur on 10.07.18.
- */
 public class Lab2 {
 
     public void fill(double[] d) {

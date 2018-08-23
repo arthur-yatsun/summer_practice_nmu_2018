@@ -1,33 +1,20 @@
-import controller.Controller;
-import forms.Form;
-
-import java.awt.*;
-import java.io.IOException;
-import javax.swing.*;
-
 public class Main {
-    private static Controller controller = new Controller();
+    private static Adapter controller = new Adapter();
 
     public static void main(String[] args) {
 
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Form();
-            }
-        });
-//          controller.count();
+//      controllers.count();
 //
-//        controller.getArray1();
+//        controllers.getArray1();
 //
-//        controller.getArray2();
+//        controllers.getArray2();
 //
 //        try {
-//            controller.files();
+//            controllers.files();
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-//
-//        controller.grafics();
+
+        controller.grafics();
 }
 }

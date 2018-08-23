@@ -27,6 +27,7 @@ public class Lab1 {
         x(x3);
     }
 
+
     private void x(double x){
         double s = 0;
         int i = 0;

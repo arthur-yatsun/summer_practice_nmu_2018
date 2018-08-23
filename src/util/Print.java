@@ -1,8 +1,5 @@
 package util;
 
-/**
- * Created by arthur on 18.06.18.
- */
 public class Print {
 
     public static void println(Object o){

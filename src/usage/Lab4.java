@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
-/**
- * Created by arthur on 10.07.18.
- */
 public class Lab4 {
 
     private ArrayList<Integer> numbers = new ArrayList<Integer>();
