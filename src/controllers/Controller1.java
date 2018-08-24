@@ -14,12 +14,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import usage.Lab1;
 
 public class Controller1 {
 
     private Parent root = null;
     private Stage stage;
     private Label[][] labels = new Label[3][10];
+    private Lab1 l = new Lab1();
 
     @FXML
     private GridPane results;
@@ -72,9 +74,29 @@ public class Controller1 {
             for(int j = 0; j < 10; j++) {
                 labels[i][j] = new Label();
                 results.add(labels[i][j], i, j);
-//                labels[i][j].setText("a");
             }
         }
+
+        minValue.setOnAction(event -> {
+            l.countX1(labels);
+        });
+
+        maxValue.setOnAction(event -> {
+            l.countX2(labels);
+        });
+
+        nextValueResult.setOnAction(event -> {
+            double x3 = Double.parseDouble(nextValue.getText());
+            l.countX3(labels, x3);
+        });
+
+        cleanUp.setOnAction(event -> {
+            for(int i = 0; i < 3; i++) {
+                for(int j = 0; j < 10; j++) {
+                    labels[i][j].setText("");
+                }
+            }
+        });
 
     }
 }
