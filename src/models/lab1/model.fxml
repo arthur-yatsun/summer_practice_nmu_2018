@@ -66,6 +66,5 @@
       <Label layoutX="411.0" layoutY="193.0" text="Пользовательский ввод:" />
       <TextField fx:id="nextValue" layoutX="410.0" layoutY="217.0" promptText="Введите от 0.2 до 1.0" />
       <Button fx:id="nextValueResult" layoutX="451.0" layoutY="257.0" mnemonicParsing="false" text="Посчитать" />
-      <Button fx:id="cleanUp" layoutX="459.0" layoutY="349.0" mnemonicParsing="false" text="Стереть" />
    </children>
 </AnchorPane>

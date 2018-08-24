@@ -1,8 +1,6 @@
 package controllers;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,24 +11,17 @@ import javafx.stage.Stage;
 
 public class EnterWindowController {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private Button l3;
+    private Parent root = null;
+    private Stage stage = new Stage();
 
     @FXML
     private Button l1;
-
     @FXML
     private Button l2;
-
+    @FXML
+    private Button l3;
     @FXML
     private Button l4;
-
     @FXML
     private Button l5;
 
@@ -39,21 +30,28 @@ public class EnterWindowController {
         l1.setOnAction((ActionEvent event) -> {
             l1.getScene().getWindow().hide();
 
-            FXMLLoader loader = new FXMLLoader();
-
-            Parent root = null;
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab1/model.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            Stage stage = new Stage();
-
             stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.show();
         });
 
+        l2.setOnAction(event -> {
+            l1.getScene().getWindow().hide();
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/lab2/model.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
 
     }
 }

@@ -1,18 +1,33 @@
 package usage;
 
+import javafx.scene.control.Label;
+
 import static util.Print.println;
 
 public class Lab2 {
 
-    public void fill(double[] d) {
-        println("Enter 15 elements of array: ");
+    private int[] d = new int[15];
+    private StringBuilder sb;
+
+    public void fill(Label l) {
+        sb = new StringBuilder();
         for(int i = 0; i < 15; i++){
-            d[i] = (Math.random() * 10);
-            println(d[i] + " ");
+            d[i] = (int)(Math.random() * 100);
+            sb.append(d[i]).append(" ");
         }
+        l.setText(String.valueOf(sb));
     }
 
-    public double composition(double d) {
+    public void sum(Label l) {
+        double result = 0;
+        for(int i = 0; i < 15; i++){
+            result += composition(d[i]);
+            i++;
+        }
+        l.setText(String.valueOf(result));
+    }
+
+    private double composition(double d) {
         double result = 0;
         double b = 1.0;
         for(int i = 0; i < 10; i++){
@@ -21,15 +36,5 @@ public class Lab2 {
             b += 0.1;
         }
         return result;
-    }
-
-
-    public void sum(double[] d) {
-        double result = 0;
-        for(int i = 0; i < 15; i++){
-            result += composition(d[i]);
-            i++;
-        }
-        println("Result : " + result);
     }
 }

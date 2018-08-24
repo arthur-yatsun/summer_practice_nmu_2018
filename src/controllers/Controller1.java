@@ -1,18 +1,14 @@
 package controllers;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import usage.Lab1;
 
@@ -37,8 +33,6 @@ public class Controller1 {
     private TextField nextValue;
     @FXML
     private Button nextValueResult;
-    @FXML
-    private Button cleanUp;
 
     @FXML
     void initialize() {
@@ -57,7 +51,6 @@ public class Controller1 {
         });
 
         task.setOnAction(event -> {
-            FXMLLoader loader = new FXMLLoader();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab1/task.fxml"));
@@ -78,25 +71,27 @@ public class Controller1 {
         }
 
         minValue.setOnAction(event -> {
+            clean();
             l.countX1(labels);
         });
 
         maxValue.setOnAction(event -> {
+            clean();
             l.countX2(labels);
         });
 
         nextValueResult.setOnAction(event -> {
             double x3 = Double.parseDouble(nextValue.getText());
+            clean();
             l.countX3(labels, x3);
         });
+    }
 
-        cleanUp.setOnAction(event -> {
-            for(int i = 0; i < 3; i++) {
-                for(int j = 0; j < 10; j++) {
-                    labels[i][j].setText("");
-                }
+    private void clean() {
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 10; j++) {
+                labels[i][j].setText("");
             }
-        });
-
+        }
     }
 }

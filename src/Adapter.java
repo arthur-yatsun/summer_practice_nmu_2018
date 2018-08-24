@@ -1,3 +1,4 @@
+import javafx.scene.control.Label;
 import usage.*;
 
 import java.io.FileNotFoundException;
@@ -19,8 +20,6 @@ public class Adapter {
     }
 
     public void getArray1(){
-        lab2.fill(a);
-        lab2.sum(a);
     }
 
     public void getArray2(){
