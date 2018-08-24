@@ -15,7 +15,7 @@ public class Adapter {
     private int[] b = new int[10];
 
     public void count(){
-        lab1.count();
+//        System.out.println(lab1.count());
     }
 
     public void getArray1(){

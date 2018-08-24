@@ -17,17 +17,6 @@ public class Main extends Application{
 
     public static void main(String[] args) {
         launch(args);
-//      controllers.count();
-//
-//        controllers.getArray1();
-//
-//        controllers.getArray2();
-//
-//        try {
-//            controllers.files();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        controller.grafics();
+
     }
 }

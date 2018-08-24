@@ -1,5 +1,7 @@
 package usage;
 
+import javafx.scene.control.Label;
+
 import java.util.Scanner;
 
 import static java.lang.Math.*;
@@ -9,26 +11,27 @@ public class Lab1 {
 
     Scanner scanner = new Scanner(System.in);
 
-    final int n = 10;
-    final double eps = pow(10, -3);
-    double sum = 0;
+    private final int n = 10;
+    private final double eps = pow(10, -3);
+    private double sum = 0;
 
-    public void count() {
-        println("Enter x3 form 0.2 to 1.0 : ");
-        final double x3 = scanner.nextDouble();
-        final double x2 = 1.0;
-        final double x1 = 0.2;
+    private final double x1 = 0.2;
+    private final double x2 = 1.0;
 
-        println("x1 = " + x1);
-        x(x1);
-        println("x2 = " + x2);
-        x(x2);
-        println("x3 = " + x3);
-        x(x3);
+    public void countX1(Label[][] labels) {
+        x(x1, labels);
+    }
+
+    public void countX2(Label[][] labels) {
+        x(x2, labels);
+    }
+
+    public void countX3(Label[][] labels, double usersNumber) {
+        x(usersNumber, labels);
     }
 
 
-    private void x(double x){
+    private void x(double x, Label[][] labels){
         double s = 0;
         int i = 0;
         do {
