@@ -1,44 +1,49 @@
 package usage;
 
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Lab4 {
 
-    private ArrayList<Integer> numbers = new ArrayList<Integer>();
+    private static ArrayList<Integer> numbers = new ArrayList<Integer>();;
 
-    public void writeInFile() throws IOException {
+    public void writeInFile(Label label) throws IOException {
+
         FileWriter fw = new FileWriter("src/files/f");
-
-        for(int i = 0; i < numbers.size(); i++) {
-            for(int k = i + 1; k < numbers.size(); k++){
-                if(Objects.equals(numbers.get(i), numbers.get(k))){
-                    numbers.remove(k);
-                }
-            }
-        }
         System.out.println(numbers);
 
-        for(int i = 0; i < numbers.size(); i++){
-            fw.write(String.valueOf(numbers.get(i)) + " ");
+        Set<Integer> hs = new HashSet<>();
+        hs.addAll(numbers);
+        numbers.clear();
+        numbers.addAll(hs);
+
+
+        for(int i = 0; i < numbers.size(); i++) {
+            fw.write(numbers.get(i) + " ");
         }
+
+        label.setText(String.valueOf(numbers));
         fw.close();
     }
 
-    public void readFromFile() throws IOException {
+    public void readFromFile(Label label) throws IOException {
+
+        if(!numbers.isEmpty()){
+            numbers.clear();
+        }
 
         FileReader fr = new FileReader("src/files/h");
         Scanner sc = new Scanner(fr);
 
         while (sc.hasNextLine()){
-            numbers.add(sc.nextInt());
+            numbers.add(Integer.valueOf(sc.next()));
         }
-        System.out.println(numbers);
-
+        label.setText(String.valueOf(numbers));
         fr.close();
     }
 }

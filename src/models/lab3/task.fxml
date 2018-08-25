@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="82.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/10.0.1">
+<AnchorPane prefHeight="66.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/10.0.1">
    <children>
-      <ImageView fitHeight="117.0" fitWidth="467.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="68.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assets/t2.jpg" />
+            <Image url="@../../assets/t3.jpg" />
          </image>
       </ImageView>
    </children>

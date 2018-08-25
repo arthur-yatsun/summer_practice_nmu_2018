@@ -1,43 +1,54 @@
 package usage;
 
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
-
-import static util.Print.print;
-import static util.Print.println;
 
 public class Lab3 {
 
-    private Scanner scanner = new Scanner(System.in);
+    private StringBuilder sb;
+    private static Integer b[] = new Integer[10];
+    private static Integer[] result = new Integer[b.length + 1];
+    private Label label;
 
-    public void solve(int[] b) {
+    public void addNumber(Label l, TextField t) {
 
-        Integer[] result = new Integer[b.length + 1];
-        writeIn(b); // write random numbers
-
-        for(int i = 0; i < b.length; i++){
+        sb = new StringBuilder();
+        for(int i = 0; i < b.length; i++) {
             result[i] = b[i];
-            print(b[i] + " ");
+            sb.append(b[i]).append(" ");
         }
 
-        println("Enter b: ");
-        result[result.length - 1] = scanner.nextInt();   //fill b as last element of array
+        result[result.length - 1] = Integer.valueOf(t.getText());   //fill b as last element of array
+
+        sb.append(result[result.length - 1]);
+        l.setText(String.valueOf(sb));
+    }
+
+    public void solve(Label l) {
 
         Arrays.sort(result, Collections.reverseOrder()); // sort by descending
 
-        show(result);
+        sb = new StringBuilder();
+
+        for (Integer aResult : result) {
+            sb.append(aResult).append(" ");
+        }
+
+        l.setText(String.valueOf(sb));
     }
 
-    private void writeIn(int[] a){
-        for(int i = 0; i < a.length; i++){
-            a[i] = (int) (Math.random() * 51); //from 1 till 50
+    public void writeIn(Label l){
+        sb = new StringBuilder();
+        for(int i = 0; i < 10; i++){
+            b[i] = (int)(Math.random() * 51);
         }
-    }
 
-    private void show(Integer[] result){
-        for(int i = 0; i < result.length; i++){
-            print(result[i] + " ");
+        Arrays.sort(b, Collections.reverseOrder()); // sort by descending
+        for(int i = 0; i < 10; i++){
+            sb.append(b[i]).append(" ");
         }
+        l.setText(String.valueOf(sb));
     }
 }

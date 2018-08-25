@@ -53,5 +53,44 @@ public class EnterWindowController {
             stage.show();
         });
 
+        l3.setOnAction(event -> {
+            l1.getScene().getWindow().hide();
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/lab3/model.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        l4.setOnAction(event -> {
+            l1.getScene().getWindow().hide();
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/lab4/model.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        l5.setOnAction(event -> {
+            l1.getScene().getWindow().hide();
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/lab5/model.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
     }
 }

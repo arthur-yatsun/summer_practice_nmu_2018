@@ -2,8 +2,6 @@ package usage;
 
 import javafx.scene.control.Label;
 
-import static util.Print.println;
-
 public class Lab2 {
 
     private int[] d = new int[15];
