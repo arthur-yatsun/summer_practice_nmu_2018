@@ -61,6 +61,17 @@ public class Lab5 {
             i++;
         }
     }
+
+    public void trig(Label[][] labels) {
+        double[] r  = {PI/3, PI/4, 2*PI/3, PI};
+        for (int i = 0; i < r.length; i++) {
+            labels[0][i].setText(String.valueOf(r[i]));
+            labels[1][i].setText(String.valueOf(f3(r[i])));
+            labels[2][i].setText(String.valueOf(f5(r[i])));
+            labels[3][i].setText(String.valueOf(f7(r[i])));
+        }
+    }
+
     public void display() {
         double x = 0.0;
         while (x < 3.1){
@@ -81,8 +92,7 @@ public class Lab5 {
 
         double[] r  = {PI/3, PI/4, 2*PI/3, PI};
         for (double aR : r) {
-            System.out.printf("%-22.3f %-22.3f %-22.3f %-22.3f %-22.3f",
-                    aR, f1(aR), f2(aR), f4(aR), f6(aR));
+            System.out.println(aR + " " + f3(aR) + " " + f5(aR) + " " + f7(aR));
             println("");
         }
     }
