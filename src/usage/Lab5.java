@@ -1,5 +1,8 @@
 package usage;
 
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+
 import static java.lang.Math.*;
 import static java.lang.Math.PI;
 import static java.lang.Math.sin;
@@ -35,9 +38,31 @@ public class Lab5 {
         return 1 /(sinh(x) + sin(x));
     }
 
+    public void linear(Label[][] labels) {
+        double x = 0.0;
+        int i = 0;
+        while (x < 3.1){
+
+            if (f1(x) == Double.POSITIVE_INFINITY || f1(x) == Double.NEGATIVE_INFINITY){
+                labels[0][i].setText(String.valueOf(x));
+                labels[1][i].setText(String.valueOf("Разрыв"));
+                labels[2][i].setText(String.valueOf(f2(x)));
+                labels[3][i].setText(String.valueOf("Разрыв"));
+                labels[4][i].setText(String.valueOf(f6(x)));
+
+            } else {
+                labels[0][i].setText(String.valueOf(x));
+                labels[1][i].setText(String.valueOf(f1(x)));
+                labels[2][i].setText(String.valueOf(f2(x)));
+                labels[3][i].setText(String.valueOf(f4(x)));
+                labels[4][i].setText(String.valueOf(f6(x)));
+            }
+            x += 0.1;
+            i++;
+        }
+    }
     public void display() {
         double x = 0.0;
-
         while (x < 3.1){
 
             if (f1(x) == Double.POSITIVE_INFINITY || f1(x) == Double.NEGATIVE_INFINITY){

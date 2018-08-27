@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="170.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller5">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="626.0" style="-fx-background-color: #008080;">
+         <children>
+            <Label layoutX="199.0" layoutY="10.0" prefHeight="60.0" prefWidth="358.0" text="Подсчет значений в точке" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="Purisa Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="returnToMainWindow" layoutX="31.0" layoutY="19.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" text="Вернуться обратно" wrapText="true" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="trigonometry" layoutX="75.0" layoutY="101.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="189.0" text="Тригонометрические" />
+      <Button fx:id="linear" layoutX="400.0" layoutY="101.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="168.0" text="Линейные" />
+   </children>
+</AnchorPane>
