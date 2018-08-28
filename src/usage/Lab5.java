@@ -10,7 +10,7 @@ import static util.Print.println;
 
 public class Lab5 {
 
-    public double f1(double x){
+    public static double f1(double x){
         return 1/((x*x) * pow(1 + x*x, 2));
     }
 
@@ -18,7 +18,7 @@ public class Lab5 {
         return pow(x, 4) / (sqrt(1 + x*x));
     }
 
-    public double f3(double x){
+    public static double f3(double x){
         return 1/(pow(1 + pow(sin(x), 2), 1/4));
     }
 

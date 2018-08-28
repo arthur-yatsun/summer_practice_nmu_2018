@@ -59,6 +59,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
+            <Button fx:id="chart" layoutX="269.0" layoutY="264.0" mnemonicParsing="false" text="Charts" />
          </children></AnchorPane>
       <AnchorPane prefHeight="80.0" prefWidth="601.0" style="-fx-background-color: #008080;">
          <children>

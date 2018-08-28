@@ -24,6 +24,8 @@ public class EnterWindowController {
     private Button l4;
     @FXML
     private Button l5;
+    @FXML
+    private Button chart;
 
     @FXML
     void initialize() {
@@ -41,7 +43,7 @@ public class EnterWindowController {
         });
 
         l2.setOnAction(event -> {
-            l1.getScene().getWindow().hide();
+            l2.getScene().getWindow().hide();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab2/model.fxml"));
@@ -54,7 +56,7 @@ public class EnterWindowController {
         });
 
         l3.setOnAction(event -> {
-            l1.getScene().getWindow().hide();
+            l3.getScene().getWindow().hide();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab3/model.fxml"));
@@ -67,7 +69,7 @@ public class EnterWindowController {
         });
 
         l4.setOnAction(event -> {
-            l1.getScene().getWindow().hide();
+            l4.getScene().getWindow().hide();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab4/model.fxml"));
@@ -80,10 +82,23 @@ public class EnterWindowController {
         });
 
         l5.setOnAction(event -> {
-            l1.getScene().getWindow().hide();
+            l5.getScene().getWindow().hide();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/lab5/model.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        chart.setOnAction(event -> {
+            chart.getScene().getWindow().hide();
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/charts.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
