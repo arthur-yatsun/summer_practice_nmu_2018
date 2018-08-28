@@ -54,10 +54,23 @@ public class Charts {
         });
 
         gr1.setOnAction(event -> {
-            gr1.getScene().getWindow().hide();
 
             try {
                 root = FXMLLoader.load(getClass().getResource("/models/charts/gr1.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+
+        gr2.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr2.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -14,7 +14,7 @@ public class Lab5 {
         return 1/((x*x) * pow(1 + x*x, 2));
     }
 
-    public double f2(double x){
+    public static double f2(double x){
         return pow(x, 4) / (sqrt(1 + x*x));
     }
 

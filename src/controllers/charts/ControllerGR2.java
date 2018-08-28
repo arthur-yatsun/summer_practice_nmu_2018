@@ -7,7 +7,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import usage.Lab5;
 
-public class ControllerGR1 {
+public class ControllerGR2 {
 
     @FXML
     private LineChart<?, ?> chart;
@@ -23,7 +23,7 @@ public class ControllerGR1 {
         XYChart.Series series = new XYChart.Series();
         double i = -3.1;
         while (i < 3.1) {
-            series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), Lab5.f1(i)));
+            series.getData().add(new XYChart.Data<String, Number>(String.valueOf(i), Lab5.f2(i)));
             i = i + 0.1;
         }
         chart.getData().addAll(series);
