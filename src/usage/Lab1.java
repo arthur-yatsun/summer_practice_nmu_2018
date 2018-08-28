@@ -2,11 +2,10 @@ package usage;
 
 import javafx.scene.control.Label;
 import static java.lang.Math.*;
-import static util.Print.println;
 
 public class Lab1 {
 
-    private final double eps = pow(10, -3);
+    private static final double EPS = pow(10, -3);
 
     public void countX1(Label[][] labels) {
         double x1 = 0.2;
@@ -29,13 +28,13 @@ public class Lab1 {
         do {
             s += pow((x-1)/(x+1),2*i+1)/(2*i+1);
             sum = f(x) - s;
-            println("i=" + i + " s=" + s + " y=" + f(x));
 
             labels[0][i].setText(String.valueOf(i));
             labels[1][i].setText(String.valueOf(s));
             labels[2][i].setText(String.valueOf(f(x)));
             i++;
-        } while (abs(sum) >= eps);
+
+        } while (abs(sum) >= Source.EPS);
     }
 
     private double f(double x){

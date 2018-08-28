@@ -16,8 +16,5 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        Lab5 l = new Lab5();
-        l.display();
-
     }
 }

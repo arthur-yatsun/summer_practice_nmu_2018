@@ -10,7 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import usage.Handler;
 import usage.Lab1;
+import usage.Source;
 
 public class Controller1 {
 
@@ -18,6 +20,7 @@ public class Controller1 {
     private Stage stage;
     private Label[][] labels = new Label[3][10];
     private Lab1 l = new Lab1();
+    Handler handler = new Handler();
 
     @FXML
     private GridPane results;
@@ -36,32 +39,9 @@ public class Controller1 {
 
     @FXML
     void initialize() {
-        returnToMainWindow.setOnAction(event -> {
-            returnToMainWindow.getScene().getWindow().hide();
 
-            try {
-                root = FXMLLoader.load(getClass().getResource("/models/enterWindow.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        });
-
-        task.setOnAction(event -> {
-
-            try {
-                root = FXMLLoader.load(getClass().getResource("/models/lab1/task.fxml"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
-        });
+        handler.getWindow(returnToMainWindow, Source.PATH);
+        handler.getWindow(task, Source.PATH_TO_TASK1);
 
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 10; j++) {

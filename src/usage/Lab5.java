@@ -1,12 +1,9 @@
 package usage;
 
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-
 import static java.lang.Math.*;
 import static java.lang.Math.PI;
 import static java.lang.Math.sin;
-import static util.Print.println;
 
 public class Lab5 {
 
@@ -84,16 +81,16 @@ public class Lab5 {
                 System.out.printf("%-22.1f %-22.3f %-22.3f %-22.3f %-22.3f",
                         x, f1(x), f2(x), f4(x), f6(x));
             }
-            println("");
+
             x += 0.1;
         }
 
-        println("----------------------------------------------------------------------------");
+
 
         double[] r  = {PI/3, PI/4, 2*PI/3, PI};
         for (double aR : r) {
             System.out.println(aR + " " + f3(aR) + " " + f5(aR) + " " + f7(aR));
-            println("");
+
         }
     }
 }
