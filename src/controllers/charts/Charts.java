@@ -80,5 +80,69 @@ public class Charts {
             stage.show();
         });
 
+        gr3.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr3.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        gr4.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr4.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        gr5.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr5.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        gr6.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr6.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
+        gr7.setOnAction(event -> {
+
+            try {
+                root = FXMLLoader.load(getClass().getResource("/models/charts/gr7.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
     }
 }

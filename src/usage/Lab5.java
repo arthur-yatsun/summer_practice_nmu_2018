@@ -19,19 +19,19 @@ public class Lab5 {
         return 1/(pow(1 + pow(sin(x), 2), 1/4));
     }
 
-    public double f4(double x){
+    public static double f4(double x){
         return 1/ (x*x*pow(E , x));
     }
 
-    public double f5(double x){
+    public static double f5(double x){
         return (Math.cosh(x) - 1) / x;
     }
 
-    public double f6(double x){
-        return (1 - x) / pow(log(x), 2);
+    public static double f6(double x){
+        return (1 - x) / (pow(log(x), 2));
     }
 
-    public double f7(double x){
+    public static double f7(double x){
         return 1 /(sinh(x) + sin(x));
     }
 
